@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,8 +16,9 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     private ImageView donationLogo;
     private TextView frontTitle;
+    private Button donorButton, recipientButton;
 
-    Animation topAnimation, bottomAnimation;
+    Animation topAnimation, bottomAnimation, buttonAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +28,17 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         donationLogo = findViewById(R.id.donationLogo);
         frontTitle = findViewById(R.id.frontTitle);
+        donorButton = findViewById(R.id.donorButton);
+        recipientButton = findViewById(R.id.recipientButton);
 
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
+        buttonAnimation = AnimationUtils.loadAnimation(this, R.anim.button_animation);
 
         donationLogo.setAnimation(topAnimation);
         frontTitle.setAnimation(bottomAnimation);
+        donorButton.setAnimation(buttonAnimation);
+        recipientButton.setAnimation(buttonAnimation);
 
         int splash_screen = 4300;
 

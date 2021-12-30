@@ -13,7 +13,7 @@
         android:background="#495e35"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
         android:elevation="10dp" >
@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="10dp"
             android:orientation="vertical" >
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -59,8 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:orientation="vertical"
-                android:layout_marginBottom="20dp">
+                android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -71,6 +70,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/regisFullName"
+                        android:inputType="text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Enter full name:"
@@ -124,18 +124,85 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <Spinner
-                    android:id="@+id/livingArea"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:background="#fff"
-                    android:layout_marginStart="9dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:entries="@array/livingarea"/>
+                    android:theme="@style/TextInputLayoutStyle"
+                    app:boxStrokeColor="#000"
+                    app:hintTextAppearance="@color/purple_500"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/regisEmergencyNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter emergency contact number:"
+                        android:inputType="number"
+                        android:drawablePadding="10dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:textColorHint="#000"
+                        android:drawableStart="@drawable/ic_phone"/>
 
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextInputLayoutStyle"
+                    app:boxStrokeColor="#000"
+                    app:hintTextAppearance="@color/purple_500"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/regisEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter email address:"
+                        android:inputType="text"
+                        android:drawablePadding="10dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:textColorHint="#000"
+                        android:drawableStart="@drawable/ic_email"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp">
+
+                    <Spinner
+                        android:id="@+id/livingArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="#fff"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:entries="@array/livingarea"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp">
+
+                <Button
+                    android:id="@+id/continueRegisButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/button_background"
+                    android:text="Continue"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
