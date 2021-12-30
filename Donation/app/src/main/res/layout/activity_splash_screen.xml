@@ -26,12 +26,23 @@
             android:layout_marginBottom="10dp"
             android:orientation="vertical" >
 
+            <TextView
+                android:id="@+id/introQuotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="We can't help everyone, but\neveryone can help someone."
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
             <ImageView
                 android:id="@+id/donationLogo"
                 android:layout_width="297dp"
                 android:layout_height="199dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="30dp"
                 android:src="@drawable/charitylogo"/>
 
             <TextView

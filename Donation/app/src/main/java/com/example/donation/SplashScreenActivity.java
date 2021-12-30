@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -15,10 +16,10 @@ import android.widget.TextView;
 public class SplashScreenActivity extends AppCompatActivity {
 
     private ImageView donationLogo;
-    private TextView frontTitle;
+    private TextView frontTitle, introQuotes;
     private Button donorButton, recipientButton;
 
-    Animation topAnimation, bottomAnimation, buttonAnimation;
+    Animation topAnimation, bottomAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,25 +31,31 @@ public class SplashScreenActivity extends AppCompatActivity {
         frontTitle = findViewById(R.id.frontTitle);
         donorButton = findViewById(R.id.donorButton);
         recipientButton = findViewById(R.id.recipientButton);
+        introQuotes = findViewById(R.id.introQuotes);
 
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
-        buttonAnimation = AnimationUtils.loadAnimation(this, R.anim.button_animation);
 
         donationLogo.setAnimation(topAnimation);
         frontTitle.setAnimation(bottomAnimation);
-        donorButton.setAnimation(buttonAnimation);
-        recipientButton.setAnimation(buttonAnimation);
+        donorButton.setAnimation(bottomAnimation);
+        recipientButton.setAnimation(bottomAnimation);
+        introQuotes.setAnimation(bottomAnimation);
 
-        int splash_screen = 4300;
-
-        new Handler().postDelayed(new Runnable() {
+        donorButton.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void run() {
+            public void onClick(View view){
+                Intent intent = new Intent(SplashScreenActivity.this, DonorInfoDetailsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        recipientButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
                 Intent intent = new Intent(SplashScreenActivity.this, InfoDetailsActivity.class);
                 startActivity(intent);
-                finish();
             }
-        }, splash_screen);
+        });
     }
 }

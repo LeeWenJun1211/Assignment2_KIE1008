@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="#495e35"
     android:padding="20dp"
-    tools:context=".InfoDetailsActivity">
+    tools:context=".DonorInfoDetailsActivity">
 
     <androidx.cardview.widget.CardView
         android:background="#495e35"
@@ -40,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Hello Recipient!"
+                android:text="Hello Donor!"
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
