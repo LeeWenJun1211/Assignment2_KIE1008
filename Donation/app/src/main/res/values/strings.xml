@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Donation</string>
+    
+    <string-array name="livingarea">
+        <item>Select your living area</item>
+        <item>Perlis</item>
+        <item>Kedah</item>
+        <item>Kelatan</item>
+        <item>Terengganu</item>
+        <item>Penang</item>
+        <item>Perak</item>
+        <item>Pahang</item>
+        <item>Selangor</item>
+        <item>NegeriSembilan</item>
+        <item>Malacca</item>
+        <item>Johor</item>
+        <item>Sabah</item>
+        <item>Sarawak</item>
+    </string-array>
+</resources>
