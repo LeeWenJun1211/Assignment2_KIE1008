@@ -31,7 +31,7 @@
                 android:layout_width="297dp"
                 android:layout_height="199dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/charitylogo"/>
 
             <TextView
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Sign up for New Account."
+                android:text="Sign up a New Account."
                 android:textColor="#000"
                 android:textSize="30sp"
                 android:textStyle="bold"/>
@@ -79,6 +79,7 @@
                     android:id="@+id/signUpPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:hint="Create password: "
                     android:inputType="text"
                     android:drawablePadding="10dp"
